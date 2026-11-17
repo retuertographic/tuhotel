@@ -1,20 +1,28 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Lato, Poppins } from "next/font/google";
+import { Header } from "@/components/sites/tuhotelaldia/Header";
+import { Footer } from "@/components/sites/tuhotelaldia/Footer";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const lato = Lato({
+  variable: "--font-lato",
   subsets: ["latin"],
+  weight: ["400", "700", "900"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const poppins = Poppins({
+  variable: "--font-poppins",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
 });
 
 export const metadata: Metadata = {
-  title: "Website Clone",
-  description: "Pixel-perfect website clone",
+  title: {
+    default: "Tu Hotel al Día - Gestión Hotelera Online",
+    template: "%s - Tu Hotel al Día",
+  },
+  description:
+    "Revenue Management, distribución digital y marketing digital para hoteles y alojamientos turísticos. Trato personalizado y sin comisiones.",
 };
 
 export default function RootLayout({
@@ -23,11 +31,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="es" className={`${lato.variable} ${poppins.variable} h-full antialiased`}>
+      <body className="flex min-h-full flex-col bg-white">
+        <Header />
+        <main className="flex-1">{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }
