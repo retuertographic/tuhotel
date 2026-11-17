@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { footerLinks } from "./nav";
 import { BackToTop } from "./BackToTop";
 
@@ -21,9 +22,9 @@ export function Footer() {
       <ul className="mt-1 flex flex-wrap justify-center gap-x-8">
         {footerLinks.map((l) => (
           <li key={l.label}>
-            <a href={l.href} className="hover:text-white">
+            <Link href={l.href} className="hover:text-white">
               {l.label}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>

@@ -21,8 +21,8 @@ export function MediaRow({
           src={ASSET(image)}
           alt="Image"
           width={900}
-          height={560}
-          className={cn("aspect-[16/10] w-full object-cover", reverse && "md:order-2")}
+          height={400}
+          className={cn("aspect-[9/4] w-full object-cover", reverse && "md:order-2")}
         />
       )}
       <div className={cn(!image && "mx-auto max-w-[760px] text-center")}>

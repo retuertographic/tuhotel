@@ -10,60 +10,51 @@ export type Plan = {
   highlight?: boolean;
 };
 
-/** Plans as shown on the home page (taglines differ from /planes on the source site). */
-export const homePlans: Plan[] = [
-  {
-    name: "BASE",
-    tagline: "PLAN DE ASESORAMIENTO BÁSICO",
-    image: "server1.jpg",
-    features: [
-      "Estudio Personalizado",
-      "Asesoramiento en Revenue Management",
-      "Estrategias de Pricing",
-      "Informes de Resultados",
-      "Pick Up y propuestas de acciones de venta",
-    ],
-  },
-  {
-    name: "PREMIUM",
-    tagline: "SOLUCIÓN IDEAL PARA LA MAYORÍA",
-    image: "server2.jpg",
-    includes: "(además del PLAN PLUS)",
-    features: [
-      "Creación y gestión de acciones de Marketing digital",
-      "Gestión de canales de reputación",
-      "Acciones de Fidelización de clientes",
-    ],
-    highlight: true,
-  },
-  {
-    name: "PLUS",
-    tagline: "GESTIÓN INTEGRAL DE TU ESTABLECIMIENTO",
-    image: "server3.jpg",
-    includes: "(además del PLAN BASE)",
-    features: [
-      "Intermediación en contratación de herramientas y canales de distribución",
-      "Gestión de contenidos y precios en canales",
-      "Control y seguimiento",
-    ],
-  },
-];
+const basePlan: Plan = {
+  name: "BASE",
+  tagline: "PLAN DE ASESORAMIENTO BÁSICO",
+  image: "server1.jpg",
+  features: [
+    "Estudio Personalizado",
+    "Asesoramiento en Revenue Management",
+    "Estrategias de Pricing",
+    "Informes de Resultados",
+    "Pick Up y propuestas de acciones de venta",
+  ],
+};
 
-/** Plans as shown on /planes (order, taglines and prices as on the source page). */
+const plusPlan: Plan = {
+  name: "PLUS",
+  tagline: "SOLUCIÓN IDEAL PARA LA MAYORÍA",
+  image: "server3.jpg",
+  includes: "(además del PLAN BASE)",
+  features: [
+    "Intermediación en contratación de herramientas y canales de distribución",
+    "Gestión de contenidos y precios en canales",
+    "Control y seguimiento",
+  ],
+  highlight: true,
+};
+
+const premiumPlan: Plan = {
+  name: "PREMIUM",
+  tagline: "GESTIÓN INTEGRAL DE TU ESTABLECIMIENTO",
+  image: "server2.jpg",
+  includes: "(además del PLAN PLUS)",
+  features: [
+    "Creación y gestión de acciones de Marketing digital",
+    "Gestión de canales de reputación",
+    "Acciones de Fidelización de clientes",
+  ],
+};
+
+/** Home and /planes share the same order and taglines (the source site mixed them up on the home page). */
+export const homePlans: Plan[] = [basePlan, plusPlan, premiumPlan];
+
 export const planesPagePlans: Plan[] = [
-  { ...homePlans[0], price: "*desde 250€/mes" },
-  {
-    ...homePlans[2],
-    tagline: "SOLUCIÓN IDEAL PARA LA MAYORÍA",
-    price: "*desde 400€/mes",
-    highlight: true,
-  },
-  {
-    ...homePlans[1],
-    tagline: "GESTIÓN INTEGRAL DE TU ESTABLECIMIENTO",
-    price: "*desde 600€/mes",
-    highlight: false,
-  },
+  { ...basePlan, price: "*desde 250€/mes" },
+  { ...plusPlan, price: "*desde 400€/mes" },
+  { ...premiumPlan, price: "*desde 600€/mes" },
 ];
 
 export type Testimonial = { quote: string; author: string; logo: string };

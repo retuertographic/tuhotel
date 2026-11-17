@@ -4,7 +4,7 @@ import { useState } from "react";
 import { BarChart3, Handshake, Percent, Search } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-// Tab labels are ordered as on the source; panes are keyed by label.
+// Tab order as on the source. Pane texts are matched to their headings (they were swapped on the source).
 const tabs = [
   {
     label: "ESTUDIO",
@@ -22,13 +22,13 @@ const tabs = [
     label: "RESULTADOS",
     title: "Resultados",
     Icon: BarChart3,
-    text: "No trabajamos con comisiones. Nuestra garantía de permanencia trabajando para su empresa será la conversión positiva de su establecimiento en cuanto a resultados. Su éxito será también el nuestro.",
+    text: "Realizamos seguimiento de sus ventas elaborando informes de producción, comparativas de competencia y evolución de rentabilidad actuando con el fin de optimizar sus ventas.",
   },
   {
     label: "SIN COMISIONES",
     title: "Sin Comisiones",
     Icon: Percent,
-    text: "Realizamos seguimiento de sus ventas elaborando informes de producción, comparativas de competencia y evolución de rentabilidad actuando con el fin de optimizar sus ventas.",
+    text: "No trabajamos con comisiones. Nuestra garantía de permanencia trabajando para su empresa será la conversión positiva de su establecimiento en cuanto a resultados. Su éxito será también el nuestro.",
   },
 ];
 

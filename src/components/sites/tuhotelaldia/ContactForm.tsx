@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { SOURCE_ORIGIN } from "./nav";
+import Link from "next/link";
 
 const field =
   "w-full border border-[#ddd] bg-white px-4 py-3 text-[15px] text-ink outline-none transition-colors placeholder:text-[#aaa] focus:border-brand";
@@ -77,17 +77,17 @@ export function ContactForm() {
         <input name="privacidad" type="checkbox" required className="mt-1 size-4 accent-brand" />
         <span>
           Estoy de acuerdo con la{" "}
-          <a href={`${SOURCE_ORIGIN}/cookies`} className="text-brand underline">
+          <Link href="/cookies" className="text-brand underline">
             Política de cookies
-          </a>{" "}
+          </Link>{" "}
           y la{" "}
-          <a href={`${SOURCE_ORIGIN}/politica-de-privacidad`} className="text-brand underline">
+          <Link href="/politica-de-privacidad" className="text-brand underline">
             Política de Privacidad
-          </a>{" "}
+          </Link>{" "}
           y declaro que he leído el{" "}
-          <a href={`${SOURCE_ORIGIN}/aviso-legal`} className="text-brand underline">
+          <Link href="/aviso-legal" className="text-brand underline">
             Aviso Legal
-          </a>
+          </Link>
           .
         </span>
       </label>

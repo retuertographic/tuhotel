@@ -3,6 +3,7 @@
 # marcadores de posición de public/sites/tuhotelaldia/.
 # Ejecútalo desde TU ordenador (el servidor bloquea IPs de nube):
 #   bash scripts/download-tuhotelaldia-assets.sh
+# Las imágenes imgs-servicios*.jpg ya las aportó la propietaria y no se descargan.
 set -euo pipefail
 cd "$(dirname "$0")/.."
 DEST=public/sites/tuhotelaldia
@@ -14,11 +15,6 @@ FILES=(
   "media/com_sppagebuilder/placeholder/server1.jpg"
   "media/com_sppagebuilder/placeholder/server2.jpg"
   "media/com_sppagebuilder/placeholder/server3.jpg"
-  "media/com_sppagebuilder/placeholder/imgs-servicios.jpg"
-  "media/com_sppagebuilder/placeholder/imgs-servicios2.jpg"
-  "media/com_sppagebuilder/placeholder/imgs-servicios3.jpg"
-  "media/com_sppagebuilder/placeholder/imgs-servicios4.jpg"
-  "media/com_sppagebuilder/placeholder/imgs-servicios5.jpg"
   "media/com_sppagebuilder/placeholder/untitled-11.jpg"
   "media/com_sppagebuilder/placeholder/untitled-12.jpg"
   "media/com_sppagebuilder/placeholder/untitled-13.jpg"

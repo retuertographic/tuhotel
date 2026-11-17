@@ -15,8 +15,8 @@ export default function Page() {
             src={ASSET("imgs-servicios.jpg")}
             alt="Image"
             width={900}
-            height={560}
-            className="mb-16 aspect-[21/9] w-full object-cover"
+            height={400}
+            className="mb-16 aspect-[9/4] w-full object-cover"
           />
           <SectionHeading as="h1" title="NUESTRO EQUIPO" />
           <div className="mx-auto max-w-[860px] space-y-5 text-center text-[17px] leading-[1.8]">

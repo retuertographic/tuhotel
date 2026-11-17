@@ -36,12 +36,11 @@ export const mainNav: NavItem[] = [
   },
 ];
 
-/** Legal pages were not cloned; they point to the live site. */
 export const footerLinks = [
-  { label: "Sitemap", href: `${SOURCE_ORIGIN}/sitemap` },
-  { label: "Cookies", href: `${SOURCE_ORIGIN}/cookies` },
-  { label: "Aviso legal", href: `${SOURCE_ORIGIN}/aviso-legal` },
-  { label: "Política de privacidad", href: `${SOURCE_ORIGIN}/politica-de-privacidad` },
+  { label: "Sitemap", href: "/sitemap" },
+  { label: "Cookies", href: "/cookies" },
+  { label: "Aviso legal", href: "/aviso-legal" },
+  { label: "Política de privacidad", href: "/politica-de-privacidad" },
 ];
 
 export const ASSET = (name: string) => `/sites/tuhotelaldia/${name}`;

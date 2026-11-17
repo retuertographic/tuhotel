@@ -23,20 +23,25 @@
 | `/saber-mas/faq` | `src/app/saber-mas/faq/page.tsx` |
 | `/saber-mas/contactanos`, `/contacto` | `src/components/sites/tuhotelaldia/ContactPage.tsx` |
 | `/servicios`, `/nosotros`, `/saber-mas` | redirects in `next.config.ts` |
-| `/sitemap`, `/cookies`, `/aviso-legal`, `/politica-de-privacidad` | **not cloned** — links point to the live site |
+| `/aviso-legal` | `src/app/aviso-legal/page.tsx` (text in `legal.tsx`) |
+| `/cookies`, `/politica-de-privacidad` | `src/app/cookies`, `src/app/politica-de-privacidad` — same body on the source (verified), shared in `legal.tsx` |
+| `/sitemap` | `src/app/sitemap/page.tsx` |
 
 ## Assets (source URL → local path)
 All in `public/sites/tuhotelaldia/`. Except the logo, they are **labelled grey placeholders**
 until `scripts/download-tuhotelaldia-assets.sh` is run from a machine the server doesn't block.
 - `/images/logo_negative-1.png` → `logo_negative-1.png` (interim: cropped from the owner's screenshot, low-res)
 - `/media/com_sppagebuilder/placeholder/{server1,server2,server3}.jpg` → plan images
-- `/media/com_sppagebuilder/placeholder/imgs-servicios{,2,3,4,5}.jpg` → service page images
+- `imgs-servicios{,2,3,4,5}.jpg` → **real images supplied by the owner** (900×400), assigned by subject:
+  Revenue Management = magnifier, Distribución digital = booking phone, Diseño Web = woman at laptop,
+  Gestión de Reservas = hotel bell, Reputación = handshake. Not re-downloaded by the script.
 - `/media/com_sppagebuilder/placeholder/{untitled-11..18,tenerife-job-training,key-properties}.jpg` → testimonial logos
 
-## Known content quirks kept from the source
-- Home: PREMIUM = "Solución ideal para la mayoría", PLUS = "Gestión integral". /planes swaps those taglines.
-- Home tabs: the "Resultados" pane says "No trabajamos con comisiones…" and the "Sin Comisiones" pane
-  describes sales tracking (looks swapped on the source; reproduced as is).
+## Content corrected on request (differs from the source)
+- Plans: home now matches /planes — order BASE, PLUS, PREMIUM; PLUS = "Solución ideal para la mayoría"
+  (highlighted), PREMIUM = "Gestión integral de tu establecimiento".
+- Home tabs: "Sin Comisiones" shows "No trabajamos con comisiones…", "Resultados" shows the sales-tracking text.
+- Legal texts are reproduced as published; they cite the repealed LOPD 15/1999 (current law: RGPD + LOPDGDD 3/2018).
 
 ## Not verifiable (no desktop view of the source)
 Desktop layout, section backgrounds, icons, tab/carousel styling and spacing are reconstructions
