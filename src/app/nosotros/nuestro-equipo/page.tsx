@@ -12,8 +12,8 @@ export default function Page() {
       <section className="py-20 md:py-24">
         <Container>
           <Image
-            src={ASSET("imgs-servicios.jpg")}
-            alt="Image"
+            src={ASSET("nosotros.jpg")}
+            alt="Equipo de Tu Hotel al Día atendiendo a un cliente"
             width={900}
             height={400}
             className="mb-16 aspect-[9/4] w-full object-cover"

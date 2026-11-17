@@ -32,6 +32,7 @@ All in `public/sites/tuhotelaldia/`. Except the logo, they are **labelled grey p
 until `scripts/download-tuhotelaldia-assets.sh` is run from a machine the server doesn't block.
 - `/images/logo_negative-1.png` → `logo_negative-1.png` (interim: cropped from the owner's screenshot, low-res)
 - `/media/com_sppagebuilder/placeholder/{server1,server2,server3}.jpg` → plan images
+- `nosotros.jpg` → Nuestro Equipo header (owner-supplied).
 - `imgs-servicios{,2,3,4,5}.jpg` → **real images supplied by the owner** (900×400), assigned by subject:
   Revenue Management = magnifier, Distribución digital = booking phone, Diseño Web = woman at laptop,
   Gestión de Reservas = hotel bell, Reputación = handshake. Not re-downloaded by the script.
