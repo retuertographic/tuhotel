@@ -9,14 +9,25 @@ export function Footer() {
         <a href="mailto:info@tuhotelaldia.com" className="hover:text-white">
           info@tuhotelaldia.com
         </a>{" "}
-        | Todos los derechos reservados. Desarrollado por{" "}
+        | Todos los derechos reservados.
+      </p>
+      <p className="mt-1">
+        Desarrollado por{" "}
         <a
           href="https://retuertographicdesign.com/"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:text-white"
+          className="font-normal text-[#9a9a9a] underline-offset-4 hover:text-white hover:underline"
         >
           Retuerto Graphic Design
+        </a>
+        . Ricardo Retuerto Barrera | Spain-Germany |{" "}
+        <a href="tel:+34922971723" className="whitespace-nowrap hover:text-white">
+          0034 922 971 723
+        </a>{" "}
+        ·{" "}
+        <a href="tel:+493031878629" className="whitespace-nowrap hover:text-white">
+          0049 30 31878629
         </a>
       </p>
       <ul className="mt-1 flex flex-wrap justify-center gap-x-8">
